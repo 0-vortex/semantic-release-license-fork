@@ -28,8 +28,8 @@ jobs:
         run: npm i -g npm@latest
 
       - name: "📦 install dependencies"
-#        uses: bahmutov/npm-install@v1
-        run: npm ci
+        uses: bahmutov/npm-install@v1
+#        run: npm ci
 
       - name: "🚀 static app"
         run: npm run build
