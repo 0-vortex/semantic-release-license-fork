@@ -6,7 +6,7 @@ describe('mit', () => {
   let license: string;
 
   beforeEach(async () => {
-    license = (await fs.readFile('./test/mit.txt')).toString();
+    license = (await fs.readFile('./test/MIT.txt')).toString();
   });
 
   afterEach(() => jest.restoreAllMocks());
