@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "semantic-release plugin to update license year",
   "files": [
-    "build"
+    "build/**/*"
   ],
   "main": "build/index.js",
   "author": "TED Vortex <ted.vortex@gmail.com>",
