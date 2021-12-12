@@ -1,19 +1,21 @@
 import { PluginOptions } from './types/plugin-options';
 import { Context } from 'semantic-release';
-import { detectLicensePath } from './detect-license-path';
-import { promises, promises as fs } from 'fs';
-import { detectLicense } from './detect-license';
+import { promises } from 'fs';
 import { getHandler } from './get-handler';
+import { verifyConditions } from "./verify-conditions";
 
 export async function prepare({ license }: PluginOptions, context: Context) {
-  const licensePath = license?.path || await detectLicensePath();
-  const content = (await fs.readFile(licensePath)).toString();
-  const licenseType = await detectLicense(content);
+  const verifyResult = await verifyConditions({license}, context);
 
-  const handlerFn = getHandler(licenseType);
-  const replacement = await handlerFn(content, context);
+  if (verifyResult.update) {
+    const handlerFn = getHandler(verifyResult.licenseType);
+    const replacement = await handlerFn(verifyResult.content, context);
 
-  await promises.writeFile(licensePath, replacement);
+    context.logger.log(`Updating ${verifyResult.licenseType} license`);
+    await promises.writeFile(verifyResult.licensePath, replacement);
 
-  context.logger.log(`Updated license file ${licensePath}`);
+    context.logger.log(`Updated license file ${verifyResult.licensePath}`);
+  } else {
+    context.logger.log(`No compatible license to update`);
+  }
 }
