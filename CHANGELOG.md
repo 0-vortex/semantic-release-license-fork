@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [1.0.3](https://github.com/0-vortex/semantic-release-license-fork/compare/v1.0.2...v1.0.3) (2021-12-12)
+
+
+### 🐛 Bug Fixes
+
+* correct artifact path on ci build ([2894787](https://github.com/0-vortex/semantic-release-license-fork/commit/2894787b8c964a05effeaa7d714bc0fa9f426885))
+
 ### [1.0.2](https://github.com/0-vortex/semantic-release-license-fork/compare/v1.0.1...v1.0.2) (2021-12-12)
 
 
