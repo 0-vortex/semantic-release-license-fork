@@ -5,6 +5,18 @@
 
 > All notable changes to this project will be documented in this file
 
+### [1.0.1](https://github.com/0-vortex/semantic-release-license-fork/compare/v1.0.0...v1.0.1) (2021-12-12)
+
+
+### ✅ Tests
+
+* try not blocking the release for licenses without copyright year ([7afd858](https://github.com/0-vortex/semantic-release-license-fork/commit/7afd858607a7a86fdb3e22a05c6a673c7a296401))
+
+
+### 🐛 Bug Fixes
+
+* linter issues, silly ([8262336](https://github.com/0-vortex/semantic-release-license-fork/commit/8262336acf3b0bdb23079f2edbfeea772355ca30))
+
 ## 1.0.0 (2021-12-12)
 
 
