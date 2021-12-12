@@ -28,7 +28,7 @@ export async function verifyConditions({ license }: PluginOptions, context: Cont
     result.update = false;
     result.licenseType = licenseType;
 
-    context.logger.log(`Could not detect license`);
+    context.logger.log('Could not detect license');
   } else {
     context.logger.log(`Detected license type ${licenseType}`);
   }

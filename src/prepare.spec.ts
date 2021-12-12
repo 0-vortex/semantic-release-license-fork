@@ -34,7 +34,6 @@ describe('prepare', () => {
     expect(detectLicensePath).toHaveBeenCalled();
     expect(readFile).toHaveBeenCalledWith('path');
     expect(detectLicense).toHaveBeenCalledWith('content');
-    expect(handler).toHaveBeenCalledWith('MIT');
     expect(fakeHandler).toHaveBeenCalledWith('content', context);
     expect(writeFile).toHaveBeenCalledWith('path', 'replace');
   });
@@ -53,5 +52,5 @@ describe('prepare', () => {
     expect(readFile).toHaveBeenCalledWith('path');
     expect(writeFile).toHaveBeenCalledWith('path', 'replace');
   });
-  
+
 });

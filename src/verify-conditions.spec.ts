@@ -31,7 +31,7 @@ describe('verifyConditions', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should throw error when cannot detect license', async () => {
+  it('should not throw error when cannot detect license', async () => {
     jest.spyOn(_detectLicensePath, 'detectLicensePath').mockReturnValue(Promise.resolve('path'));
     const readFile = jest.spyOn(promises, 'readFile').mockReturnValue(Promise.resolve('content'));
     const detectLicense = jest.spyOn(_detectLicense, 'detectLicense').mockReturnValue(Promise.resolve(undefined));
@@ -41,7 +41,7 @@ describe('verifyConditions', () => {
     } catch (e) {
       error = e;
     }
-    expect(error).toBeDefined();
+    expect(error).toBeUndefined();
     expect(readFile).toHaveBeenCalledWith('path');
     expect(detectLicense).toHaveBeenCalledWith('content');
   });

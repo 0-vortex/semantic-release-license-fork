@@ -2,10 +2,12 @@ import { PluginOptions } from './types/plugin-options';
 import { Context } from 'semantic-release';
 import { promises } from 'fs';
 import { getHandler } from './get-handler';
-import { verifyConditions } from "./verify-conditions";
+import { verifyConditions } from './verify-conditions';
 
 export async function prepare({ license }: PluginOptions, context: Context) {
-  const verifyResult = await verifyConditions({license}, context);
+  const verifyResult = await verifyConditions({
+    license,
+  }, context);
 
   if (verifyResult.update) {
     const handlerFn = getHandler(verifyResult.licenseType);
@@ -16,6 +18,6 @@ export async function prepare({ license }: PluginOptions, context: Context) {
 
     context.logger.log(`Updated license file ${verifyResult.licensePath}`);
   } else {
-    context.logger.log(`No compatible license to update`);
+    context.logger.log('No compatible license to update');
   }
 }
