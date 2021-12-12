@@ -27,7 +27,8 @@ jobs:
         run: npm i -g npm@latest
 
       - name: "📦 install dependencies"
-        uses: bahmutov/npm-install@v1
+#        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: "🔧 lint code"
         run: npm run lint --if-present
