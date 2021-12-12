@@ -1,0 +1,53 @@
+{
+  "name": "semantic-release-license-fork",
+  "version": "0.0.0-development",
+  "license": "MIT",
+  "description": "semantic-release plugin to update license year",
+  "files": [
+    "build"
+  ],
+  "main": "build/index.js",
+  "author": "TED Vortex <ted.vortex@gmail.com>",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/0-vortex/semantic-release-license-fork/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/0-vortex/semantic-release-license-fork.git"
+  },
+  "homepage": "https://github.com/0-vortex/semantic-release-license-fork",
+  "peerDependencies": {
+    "semantic-release": ">=18.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@open-sauced/conventional-commit": "^1.0.1",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "^27.4.4",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.1",
+    "typescript": "^4.5.3"
+  },
+  "scripts": {
+    "build": "rimraf build && tsc",
+    "build:watch": "rimraf build && tsc --watch",
+    "test": "jest --runInBand --coverage --no-cache --silent",
+    "test:debug": "jest --runInBand --coverage --no-cache",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix",
+    "push": "npx @open-sauced/conventional-commit"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
