@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [1.0.4](https://github.com/0-vortex/semantic-release-license-fork/compare/v1.0.3...v1.0.4) (2021-12-19)
+
+
+### ✅ Tests
+
+* attempt to re-use open-sauced style workflows ([8c2958c](https://github.com/0-vortex/semantic-release-license-fork/commit/8c2958cd98fb70f9feb9968057f83ee25495ee08))
+
 ### [1.0.3](https://github.com/0-vortex/semantic-release-license-fork/compare/v1.0.2...v1.0.3) (2021-12-12)
 
 
