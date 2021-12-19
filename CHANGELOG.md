@@ -5,6 +5,13 @@
 
 > All notable changes to this project will be documented in this file
 
+### [1.0.5](https://github.com/0-vortex/semantic-release-license-fork/compare/v1.0.4...v1.0.5) (2021-12-19)
+
+
+### ✅ Tests
+
+* attempt to check pr action and update some dependencies ([db667cd](https://github.com/0-vortex/semantic-release-license-fork/commit/db667cd5ae6a3fd0ee964b01cd3dcf6ffa2b1103))
+
 ### [1.0.4](https://github.com/0-vortex/semantic-release-license-fork/compare/v1.0.3...v1.0.4) (2021-12-19)
 
 
