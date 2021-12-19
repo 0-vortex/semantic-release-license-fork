@@ -1,0 +1,11 @@
+name: "Triage"
+
+on:
+  issue_comment:
+    types:
+      - created
+      - edited
+
+jobs:
+  take-issue:
+    uses: 0-vortex/create-react-app-5-test/.github/workflows/triage.yml@main
